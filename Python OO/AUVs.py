@@ -52,8 +52,12 @@ auv1 = AUVs('Lua', 1, 1, 3, ['Oi', 'eu'])
 auv2 = AUVs('HueBr', 2, 2, 4, ['h', 'l'])
 
 AUVs.catalogar_auv(auv1, auv2)
+print()
 AUVs.definir_antiguidade()
+print()
 AUVs.mais_cameras()
+print()
 AUVs.listar_tabela_auvs()
+print()
 auv1.exibir_individualmente()
 
