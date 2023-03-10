@@ -48,8 +48,8 @@ class AUVs():
 
 
 #Exemplos aleatórios                   
-auv1 = AUVs('Lua', 1, 1, 3, ['Oi', 'eu'])
-auv2 = AUVs('HueBr', 2, 2, 4, ['h', 'l'])
+auv1 = AUVs('Lua', 1, 2003, 3, ['ultrassônico', 'infravermelho'])
+auv2 = AUVs('HueBr', 2, 2005, 4, ['hidrossônico', 'velocidade'])
 
 AUVs.catalogar_auv(auv1, auv2)
 print()
