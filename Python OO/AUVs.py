@@ -8,20 +8,23 @@ class AUVs():
         self.lista_sensores = sensores
         self.ano_construção = ano_construção
         
-
+    #Exibe as informações de cada objeto (auv)
     def exibir_individualmente(self):
         print(f'Nome do AUV: {self.nome}, possui thursters: {self.numero_thursters} e foi construído em {self.ano_construção}. Atualmente possui {self.numero_cameras} câmeras.')
         print(f'Possui os seguintes sensores: {self.lista_sensores}')
-        
+
+    #Armazena os auvs na lista_auvs da classe   
     def catalogar_auv(*auvs):
         AUVs.lista_auvs.extend(auvs)
 
+    #Exibe os auvs da lista_auvs em forma de tabela
     def listar_tabela_auvs():
         lista = []
         for auv in AUVs.lista_auvs:
             lista.append([auv.nome, auv.numero_thursters, auv.ano_construção, auv.numero_cameras, auv.lista_sensores])
         print(tabulate(lista, headers=['Nome', 'Thursters', 'Ano de construção', 'Câmeras', 'Sensores']))
-        
+
+    #Ordena os auvs baseado no ano de construção   
     def definir_antiguidade():
         idadeMaior = 0
         lista = []
@@ -33,7 +36,8 @@ class AUVs():
                 lista.append(auv.nome)
         print(f'Rank de AUVs a partir do mais antigo: {lista}')
 
-    def maior_angulo():
+    #Define auv com maior número de câmeras
+    def mais_cameras():
         numeroCamera = 0
         nome_auv = ''
         for auv in AUVs.lista_auvs:
@@ -44,12 +48,12 @@ class AUVs():
 
 
 #Exemplos aleatórios                   
-auv1 = AUVs('Lua', 1, 2, 4, ['Oi', 'eu'])
-auv2 = AUVs('HueBr', 2, 1, 3, ['h', 'l'])
+auv1 = AUVs('Lua', 1, 1, 3, ['Oi', 'eu'])
+auv2 = AUVs('HueBr', 2, 2, 4, ['h', 'l'])
 
-# AUVs.catalogar_auv(auv1, auv2)
-# AUVs.definir_antiguidade()
-# AUVs.maior_angulo()
-# AUVs.listar_tabela_auvs()
-#auv1.exibir_individualmente()
+AUVs.catalogar_auv(auv1, auv2)
+AUVs.definir_antiguidade()
+AUVs.mais_cameras()
+AUVs.listar_tabela_auvs()
+auv1.exibir_individualmente()
 
