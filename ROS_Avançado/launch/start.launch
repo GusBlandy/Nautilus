@@ -1,0 +1,8 @@
+<launch>
+    <rosparam command='load' file='$(find pkg)/param/stars.yaml'/> 
+    <node pkg="pkg" type="brodcaster_earth.py" name="star" output="screen"/>
+    <node pkg="pkg" type="brodcaster_moon.py" name="star2" output="screen"/>
+    <node pkg="pkg" type="brodcaster_mars.py" name="star3" output="screen"/>
+    <node pkg="pkg" type="brodcaster_fobos.py" name="star4" output="screen"/>
+    <node pkg="rviz" type="rviz" name="rviz" args='-d root/catkin_ws/ROS_Avançado/src/pkg/rviz/example.rviz'/>  
+</launch>

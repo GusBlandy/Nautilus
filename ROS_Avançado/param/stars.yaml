@@ -1,0 +1,23 @@
+
+sun:
+  name: "sun"
+    
+earth:
+  name: "earth"
+  radius: 10
+  father: 'sun'
+
+mars:
+   name: "mars"
+   radius: 7
+   father: 'sun'
+
+moon:
+  name: "moon"
+  radius: 5
+  father: 'earth' 
+
+fobos:
+  name: "fobos"
+  radius: 4
+  father: 'mars' 
