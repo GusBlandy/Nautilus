@@ -1,0 +1,4 @@
+Para rodar direitinho depois de abrir no rviz, só mudar o Fixed Frame de 'map' para 'sun'.
+
+Ele inicializa com o 'map' como padrão, precisa fazer a alteração.
+
